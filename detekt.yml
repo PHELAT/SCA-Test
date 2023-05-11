@@ -1,0 +1,50 @@
+build:
+  maxIssues: 0
+  excludeCorrectable: false
+
+config:
+  validation: true
+  warningsAsErrors: false
+
+processors:
+  active: true
+  exclude:
+    - 'DetektProgressListener'
+    - 'LicenseHeaderLoaderExtension'
+
+console-reports:
+  active: true
+  exclude:
+    - 'NotificationReport'
+    - 'FileBasedFindingsReport'
+
+output-reports:
+  active: true
+  exclude:
+    - 'TxtOutputReport'
+    - 'SarifOutputReport'
+    - 'MdOutputReport'
+
+formatting:
+  active: true
+  android: true
+  FinalNewline:
+    active: true
+    autoCorrect: true
+  Filename:
+    active: true
+    autoCorrect: true
+  MaximumLineLength:
+    active: true
+    autoCorrect: true
+    maxLineLength: 150
+    ignoreBackTickedIdentifier: true
+  ModifierOrdering:
+    active: true
+    autoCorrect: true
+  NoUnusedImports:
+    active: true
+    autoCorrect: true
+  SpacingAroundColon:
+    active: true
+    autoCorrect: true
