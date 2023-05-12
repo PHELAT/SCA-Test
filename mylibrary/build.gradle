@@ -2,6 +2,7 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'io.gitlab.arturbosch.detekt'
+    id 'org.sonarqube'
 }
 
 android {
@@ -37,6 +38,13 @@ detekt {
     source = files("src/main/java", "src/main/kotlin")
     buildUponDefaultConfig = false
     ignoreFailures = true
+}
+
+sonarqube {
+    properties {
+//        property "sonar.sources", "src"
+//        property "sonar.tests", "src"
+    }
 }
 
 dependencies {
